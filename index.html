@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>JSON-to-Go: Convert JSON to Go instantly</title>
+		<title>JSON-to-Zig: Convert JSON to Zig instantly</title>
 		<meta charset="UTF-8">
 		<script>
 			if ('serviceWorker' in navigator) {
@@ -24,26 +24,25 @@
 		<header>
 			<div class="intro">
 				<div class="title">
-					<h1>JSON-to-Go</h1>
-					<h2>Convert JSON to Go struct</h2>
+					<h1>JSON-to-Zig</h1>
+					<h2>Convert JSON to Zig struct</h2>
 				</div>
 				<div>
 					<p>
-						This tool instantly converts JSON into a Go type definition. Paste a JSON structure on the left and the equivalent Go type will be generated to the right, which you can paste into your program. The script has to make some assumptions, so double-check the output!
+						This tool instantly converts JSON into a Zig type definition. Paste a JSON structure on the left and the equivalent Zig type will be generated to the right, which you can paste into your program. The script has to make some assumptions, so double-check the output!
 					</p>
 					<p>
 						For an example, try converting JSON from the <a href="javascript:" id="sample1">SmartyStreets API</a> or the <a href="javascript:" id="sample2">GitHub API</a>.
 					</p>
 					<p>
-						&copy; 2015 <a href="https://matt.life">Matt Holt</a> (<a href="https://twitter.com/mholt6">@mholt6</a>)
-						&bull; <a href="https://github.com/mholt/json-to-go">View on GitHub</a>
+						JSON-to-Go &copy; 2015 <a href="https://matt.life">Matt Holt</a> (<a href="https://twitter.com/mholt6">@mholt6</a>)
+						&bull; <a href="https://github.com/mholt/json-to-go">View JSON-to-Go on GitHub</a>
+						&bull; <a href="https://github.com/aerth/json-to-zig">View JSON-to-Zig on GitHub</a>
 						&bull; <a href="javascript:" id="dark">Dark mode</a>
-						&bull; <a href="https://marketplace.visualstudio.com/items?itemName=maracko.json-to-go" id="vsc">VSC
-						extension</a>
 					</p>
 				</div>
 				<div>
-					<img src="resources/images/json-to-go.png" id="brand">
+					<img src="resources/images/zero.svg" style="max-height:200px" id="brand">
 				</div>
 			</div>
 		</header>
@@ -51,7 +50,7 @@
 			<tr>
 				<th style="width: 45%;">JSON</th>
 				<th style="width: 10%; font-size: 22px;">&#8594;</th>
-				<th style="width: 45%;">Go <label><input type="checkbox" id="inline" checked>Inline type definitions</label> <label><input type="checkbox" id="omitempty">omitempty</label> <span class="copy" id="copy-btn">Copy to clipboard</span></th>
+				<th style="width: 45%;">Zig <label><input type="checkbox" id="inline" >Inline type definitions</label> <label><input type="checkbox" id="omitempty">make optional fields</label> <span class="copy" id="copy-btn">Copy to clipboard</span></th>
 			</tr>
 		</table>
 		<table>
@@ -66,9 +65,8 @@
 		</table>
 
 		<footer>
-			&copy; 2015 Matt Holt
+			based on JSON-to-Go &copy; 2015 Matt Holt
 			<br>
-			The Go Gopher artwork is a derivative of that by Renee French.
 		</footer>
 	</body>
 </html>

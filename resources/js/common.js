@@ -2,19 +2,13 @@ initAnalytics();
 
 function initAnalytics()
 {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-86578-22', 'auto');
-	ga('send', 'pageview');
+  //
 }
 
 $(function()
 {
 	const emptyInputMsg = "Paste JSON here";
-	const emptyOutputMsg = "Go will appear here";
+	const emptyOutputMsg = "Zig will appear here";
 	const formattedEmptyInputMsg = '<span style="color: #777;">'+emptyInputMsg+'</span>';
 	const formattedEmptyOutputMsg = '<span style="color: #777;">'+emptyOutputMsg+'</span>';
 
@@ -44,9 +38,9 @@ $(function()
 		else
 		{
 			var finalOutput = output.go;
-			if (typeof gofmt === 'function')
-				finalOutput = gofmt(output.go);
-			var coloredOutput = hljs.highlight("go", finalOutput);
+	//		if (typeof gofmt === 'function')
+		//		finalOutput = gofmt(output.go);
+			var coloredOutput = hljs.highlight("go", finalOutput); // TODO zig highlight
 			$('#output').html(coloredOutput.value);
 		}
 	}
